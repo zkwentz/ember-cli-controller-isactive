@@ -3,8 +3,10 @@ export function initialize(/* container, application */) {
     controllerAvailable: false,
     setupController: function(controller, model) {
       this._super(controller,model);
-      this.set('controllerAvailable',true);
-      controller.set('active',true);
+      if (!controller.isGenerated) {
+        this.set('controllerAvailable',true);
+        controller.set('active',true);
+      }
     },
     activate: function() {
       this._activateController(true);
