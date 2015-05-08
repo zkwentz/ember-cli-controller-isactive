@@ -1,6 +1,21 @@
 # Ember-cli-activated-controller
 
-This README outlines the details of collaborating on this Ember addon.
+Ever wanted to know if a controller is currently showing or not? Here's an addon that does that.
+
+## Example
+
+```javascript
+  MyController = Ember.Controller.extend({
+    activeObserver: (function() {
+      if (this.get('active')) {
+        console.log('i am currently active');
+      } else {
+        console.log('i am not active');
+      }
+    }).observes('active'),
+    ...
+  })
+```
 
 ## Installation
 
@@ -12,6 +27,7 @@ This README outlines the details of collaborating on this Ember addon.
 
 * `ember server`
 * Visit your app at http://localhost:4200.
+
 
 ## Running Tests
 
