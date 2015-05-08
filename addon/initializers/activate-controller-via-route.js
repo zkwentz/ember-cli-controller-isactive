@@ -1,7 +1,9 @@
 export function initialize(/* container, application */) {
   Ember.Route.reopen({
+    controllerAvailable: false,
     setupController: function(controller, model) {
       this._super(controller,model);
+      this.set('controllerAvailable',true);
       controller.set('active',true);
     },
     activate: function() {
@@ -11,7 +13,9 @@ export function initialize(/* container, application */) {
       this._activateController(false);
     },
     _activateController: function(isActive) {
-      this.controller.set('active',isActive);
+      if (this.get('controllerAvailable')) {
+        this.controller.set('active',isActive);
+      }
     }
   });
 }
