@@ -1,4 +1,4 @@
-# Ember-cli-activated-controller
+# Ember-cli-controller-isactive
 
 Ever wanted to know if a controller is currently showing or not? Here's an addon that does that.
 
@@ -7,12 +7,41 @@ Ever wanted to know if a controller is currently showing or not? Here's an addon
 ```javascript
   MyController = Ember.Controller.extend({
     activeObserver: (function() {
-      if (this.get('active')) {
+      if (this.get('isActive')) {
         console.log('i am currently active');
       } else {
         console.log('i am not active');
       }
-    }).observes('active'),
+    }).observes('isActive'),
+    ...
+  })
+```
+
+## Override 'isActive' property name
+
+If `isActive` conflicts with your app's logic you can override it, by overriding
+the `activate-controller-via-route-mixin`:
+
+```javascript
+
+  import activateControllerViaRouteMixin from 'ember-cli-controller-isactive/mixins/activate-controller-via-route-mixin';
+
+  export default activateControllerViaRouteMixin.extend({
+    isActive: '_isActive'
+  });
+```
+
+With this, the example above would look like:
+
+```javascript
+  MyController = Ember.Controller.extend({
+    activeObserver: (function() {
+      if (this.get('_isActive')) {
+        console.log('i am currently active');
+      } else {
+        console.log('i am not active');
+      }
+    }).observes('_isActive'),
     ...
   })
 ```

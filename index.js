@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-cli-activated-controller'
+  name: 'ember-cli-controller-isactive'
 };
