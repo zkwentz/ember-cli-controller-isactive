@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-activated-controller",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Ever wanted to know if a controller is currently showing or not? Here's an addon that does that.",
   "directories": {
     "doc": "doc",
     "test": "tests"
