@@ -5,7 +5,7 @@ export function initialize(/* container, application */) {
       this._super(controller,model);
       if (!controller.isGenerated) {
         this.set('controllerAvailable',true);
-        controller.set('active',true);
+        controller.set('isActive',true);
       }
     },
     activate: function() {
@@ -16,7 +16,7 @@ export function initialize(/* container, application */) {
     },
     _activateController: function(isActive) {
       if (this.get('controllerAvailable')) {
-        this.controller.set('active',isActive);
+        this.controller.set('isActive',isActive);
       }
     }
   });
