@@ -6,4 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
+  this.route('about');
+  this.route('posts');
+  this.route('generated');
 });

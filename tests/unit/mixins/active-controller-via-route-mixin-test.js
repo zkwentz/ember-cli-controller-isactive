@@ -10,3 +10,4 @@ test('it works', function(assert) {
   var subject = ActiveControllerViaRouteMixinObject.create();
   assert.ok(subject);
 });
+
