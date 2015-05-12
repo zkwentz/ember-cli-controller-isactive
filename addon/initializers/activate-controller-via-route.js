@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import activateControllerViaRouteMixin from 'ember-cli-controller-isactive/mixins/activate-controller-via-route-mixin';
 
 export function initialize(/* container, application */) {
