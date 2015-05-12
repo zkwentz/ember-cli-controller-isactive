@@ -1,22 +1,21 @@
----
 language: node_js
 node_js:
-  - "0.12"
-
+- '0.12'
 sudo: false
-
 cache:
   directories:
-    - node_modules
-
+  - node_modules
 before_install:
-  - "npm config set spin false"
-  - "npm install -g npm@^2"
-
+- npm config set spin false
+- npm install -g npm@^2
 install:
-  - npm install -g bower
-  - npm install
-  - bower install
-
+- npm install -g bower
+- npm install
+- bower install
 script:
-  - npm test
+- npm test
+deploy:
+  provider: npm
+  email: zkwentz@gmail.com
+  api_key:
+    secure: Hr9aZj1w+mZBf6bSWZUFfMqPryPN8YXuRCwI+5Ej9B1mP7gMMuPBCoyKhYdFeXbLsWW7S5hu5UNI+2+BiahX7CSXw+//nAeebK0SaqO/mse58U+8P0q+fdA5Ym8wG5PFGuDmDuGLwStau7deDBAS0n9qR5NgRZV+pmaj3y/eJSHKffy5D6+p+dZFwWzmGWCdTNmQMTF1PmLYwN97isQEj3Dmr3fCAa+D8a2Gful0toTKtBiILNuTbqsNgpwB18TH6Vb/10SxanbqQFB+x6FxSCPgMkHSU42ETERGNOtu7yFQrrl51CML4nz1DtdH4NnKHlqnLku9MVzp9jeQ75MfB+qOzUMa90R4Cswuh4/d12ZG7zge8L0Z7HnD1SsD6/A4UycOmC31Nz5VPqzgQaS0RN7ZZ7fxNFCxeo3klLLHe8vZ+KPrOLnjp369EZqAAhq2NLXicWGkLCEYh+MtT58k0iVu9kF0FUQCVnBXsD+lUE1cRNT1F5rCn772W2NrSkYwJbY4c+pyJpHKG5DYNizTZ21PVr9gEtAwpSJ2upN7pFPgrLeJlckE3bE4/vUekHjyeTmyiIzZ3e8oklbXH3k3gTEBwPEgh5N9IWR3ild/1LJCbthADAVSGZLPd+cLZRdpF4InvePm4MipKIMZFCQLQXjA6upPK6+IOOqIM5PXrvQ=
