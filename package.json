@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-controller-isactive",
-  "version": "0.0.9",
+  "version": "0.10.0",
   "description": "Ever wanted to know if a controller is currently showing or not? Here's an addon that does that.",
   "directories": {
     "doc": "doc",
