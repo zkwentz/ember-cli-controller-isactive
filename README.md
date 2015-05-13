@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/zkwentz/ember-cli-controller-isactive.svg?branch=master)](https://travis-ci.org/zkwentz/ember-cli-controller-isactive)
 # Ember-cli-controller-isactive
 
 Ever wanted to know if a controller is currently showing or not? Here's an addon that does that.
